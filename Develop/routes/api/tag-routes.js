@@ -10,6 +10,9 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   // find a single tag by its `id`
+    Tag.findByPk(req.params.id).then((tagData) => {
+      res.json(tagData)
+    })
   // be sure to include its associated Product data
 });
 

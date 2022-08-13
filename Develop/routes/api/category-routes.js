@@ -2,15 +2,20 @@ const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
-
+//Get route works, just need to include associated products
 router.get('/', async (req, res) => {
   // find all categories
-  Category.findAll()
+  Category.findAll().then((allCategories) => {
+    res.json(allCategories)
+  })
   // be sure to include its associated Products
 });
 
 router.get('/:id', async (req, res) => {
   // find one category by its `id` value
+  Category.findByPk(req.params.id).then((categoryData) => {
+    res.json(categoryData)
+  })
   // be sure to include its associated Products
 });
 
