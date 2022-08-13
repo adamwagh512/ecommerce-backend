@@ -16,6 +16,7 @@ router.get('/:id', (req, res) => {
 });
 
 // create new product
+//even though it was given, i still tested it and it works
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
