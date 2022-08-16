@@ -16,7 +16,7 @@ The purpose of this project was to build the back-end of an E-commerce website u
 3) Open folder using code editor like VS code
 4) In the command line type : node server.js
 5) Since there is no front end, you must run the routes in Insomnia
-6) For a full demonstration, please watch [my video walkthrough]()
+6) For a full demonstration, please watch [my video walkthrough](https://drive.google.com/file/d/1xkJziVVwNsQSb4Rx7uV4U64cCPe--ht0/view)
 
 ## Acknowledgments
 I would like to sincerly thank my tutor Jack Linhart and all of the TAs for their invaluable assistance in completing this project.

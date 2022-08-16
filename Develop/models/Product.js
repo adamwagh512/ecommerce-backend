@@ -35,9 +35,10 @@ Product.init(
       }
 
     },
-    category_id: {
-      type: DataTypes.INTEGER
-    } //add references the Category model's id
+    // category_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false
+    // } //add references the Category model's id
   },
   {
     sequelize,

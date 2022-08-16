@@ -7,7 +7,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 //get route works, just need to include associated tag and category data
 router.get('/', (req, res) => {
   // find all products
-  Product.findAll().then((allProducts) => {
+  Product.findAll({include: [{model: Category},{model:Tag}]}).then((allProducts) => {
     res.json(allProducts);
   })
   // be sure to include its associated Category and Tag data
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 // get one product
 router.get('/:id', (req, res) => {
   // find a single product by its `id`
-  Product.findByPk(req.params.id).then((productData) => {
+  Product.findByPk(req.params.id, {include: [{model:Category}, {model:Tag}]}).then((productData) => {
     res.json(productData)
   })
   // be sure to include its associated Category and Tag data
